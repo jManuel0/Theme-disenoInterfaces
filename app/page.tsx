@@ -37,7 +37,7 @@ export default function Home() {
       <section className="mx-auto w-full max-w-4xl rounded-[30px] border border-zinc-200 bg-white p-6 shadow-[0_12px_28px_rgba(0,0,0,0.06)] sm:p-8">
         <header className="border-b border-zinc-200 pb-6">
           <h1 className="text-4xl font-bold tracking-tight">Appearance</h1>
-          <p className="mt-2 text-[31px] leading-tight text-zinc-400 sm:text-3xl">
+          <p className="mt-2 text-base leading-relaxed text-zinc-500 sm:text-lg">
             Set or customize your preferences for the system
           </p>
         </header>
@@ -45,10 +45,10 @@ export default function Home() {
         <div className="divide-y divide-zinc-200">
           <div className="grid gap-4 py-6 sm:grid-cols-[1fr_auto] sm:items-center">
             <div>
-              <h2 className="text-2xl font-semibold sm:text-[38px] sm:leading-none">
+              <h2 className="text-2xl font-semibold sm:text-3xl sm:leading-none">
                 Language
               </h2>
-              <p className="mt-1 text-xl text-zinc-500 sm:text-[31px] sm:leading-tight">
+              <p className="mt-1 text-base text-zinc-500 sm:text-lg">
                 Select the language of the platform
               </p>
             </div>
@@ -56,23 +56,23 @@ export default function Home() {
             <label className="relative inline-flex w-full max-w-56 items-center sm:w-56">
               <select
                 defaultValue="english"
-                className="h-14 w-full appearance-none rounded-2xl border border-zinc-300 bg-white px-5 pr-12 text-3xl font-medium text-zinc-700 outline-none transition focus:ring-2 focus:ring-violet-400 sm:h-16 sm:text-[42px]"
+                className="h-12 w-full appearance-none rounded-2xl border border-zinc-300 bg-white px-4 pr-11 text-lg font-medium text-zinc-700 outline-none transition focus:ring-2 focus:ring-violet-400"
               >
                 <option value="english">English</option>
                 <option value="spanish">Spanish</option>
                 <option value="french">French</option>
               </select>
-              <span className="pointer-events-none absolute right-4 text-2xl text-zinc-400 sm:text-3xl">
+              <span className="pointer-events-none absolute right-4 text-lg text-zinc-400">
                 v
               </span>
             </label>
           </div>
 
           <fieldset className="py-6">
-            <legend className="text-2xl font-semibold sm:text-[38px] sm:leading-none">
+            <legend className="text-2xl font-semibold sm:text-3xl sm:leading-none">
               Interface theme
             </legend>
-            <p className="mt-1 text-xl text-zinc-500 sm:text-[31px] sm:leading-tight">
+            <p className="mt-1 text-base text-zinc-500 sm:text-lg">
               Customize your application appearance
             </p>
 
@@ -85,10 +85,10 @@ export default function Home() {
 
           <div className="grid gap-4 py-6 sm:grid-cols-[1fr_auto] sm:items-center">
             <div>
-              <h2 className="text-2xl font-semibold sm:text-[38px] sm:leading-none">
+              <h2 className="text-2xl font-semibold sm:text-3xl sm:leading-none">
                 Accent color
               </h2>
-              <p className="mt-1 text-xl text-zinc-500 sm:text-[31px] sm:leading-tight">
+              <p className="mt-1 text-base text-zinc-500 sm:text-lg">
                 Pick your platform&apos;s main color
               </p>
             </div>
@@ -125,7 +125,7 @@ export default function Home() {
         <footer className="mt-5 flex flex-col gap-4 border-t border-zinc-200 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <button
             type="button"
-            className="text-xl font-semibold text-zinc-500 transition hover:text-zinc-700 sm:text-[36px]"
+            className="text-lg font-semibold text-zinc-500 transition hover:text-zinc-700 sm:text-xl"
           >
             Reset to default
           </button>
@@ -133,13 +133,13 @@ export default function Home() {
           <div className="flex flex-col gap-3 sm:flex-row">
             <button
               type="button"
-              className="h-12 rounded-2xl border border-zinc-300 px-8 text-lg font-semibold text-zinc-700 transition hover:bg-zinc-100 sm:h-14 sm:text-4xl"
+              className="h-12 rounded-2xl border border-zinc-300 px-7 text-base font-semibold text-zinc-700 transition hover:bg-zinc-100"
             >
               Cancel
             </button>
             <button
               type="button"
-              className="h-12 rounded-2xl bg-indigo-600 px-8 text-lg font-semibold text-white shadow-sm transition hover:bg-indigo-700 sm:h-14 sm:text-4xl"
+              className="h-12 min-w-[220px] rounded-2xl bg-indigo-600 px-7 text-base font-semibold text-white shadow-sm transition hover:bg-indigo-700"
             >
               Save Preferences
             </button>
@@ -170,7 +170,7 @@ function ThemeCard({ theme }: Readonly<{ theme: ThemeOption }>) {
         </div>
       </div>
 
-      <p className="mt-3 text-center text-2xl font-semibold text-zinc-600 peer-checked:text-violet-600 sm:text-[40px]">
+      <p className="mt-3 text-center text-xl font-semibold text-zinc-600 peer-checked:text-violet-600 sm:text-2xl">
         {theme.label}
       </p>
     </label>
@@ -211,7 +211,7 @@ function SettingRow({ title, icon, defaultChecked = false }: Readonly<SettingRow
         <span className="inline-flex h-6 w-6 items-center justify-center text-zinc-400 sm:h-7 sm:w-7">
           {icon}
         </span>
-        <p className="text-2xl font-semibold sm:text-[42px] sm:leading-none">
+        <p className="text-xl font-semibold sm:text-2xl sm:leading-none">
           {title}
         </p>
       </div>
